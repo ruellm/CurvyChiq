@@ -1,0 +1,107 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2rem;
+    font-family: var(--font-body);
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-gray-500);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.closeButton:hover {
+    color: var(--color-black);
+}
+
+.title {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 0.6875rem;
+    color: var(--color-gray-500);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.tableContainer {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.th {
+    padding: 1rem 0;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+}
+
+.td {
+    padding: 1rem 0;
+    font-size: 0.6875rem;
+    color: var(--color-gray-500);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.tdBold {
+    font-weight: 500;
+    color: var(--color-black);
+    letter-spacing: 0.05em;
+}
+
+.actionButton {
+    width: 100%;
+    padding: 0.8rem 0;
+    margin-top: 2rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.actionButton:hover {
+    background-color: var(--color-gray-800);
+}

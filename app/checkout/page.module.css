@@ -1,0 +1,257 @@
+.main {
+    min-height: 100vh;
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-gray-50);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.breadcrumb {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray-500);
+    font-size: 0.9rem;
+}
+
+.title {
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media(min-width: 1024px) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.section {
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-gray-100);
+    padding-bottom: 0.5rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldFull {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row that holds the label + change icon side-by-side */
+.fieldLabelRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.fieldLabelRow label {
+    margin-bottom: 0 !important;
+}
+
+/* "Change Address / Change" pencil button */
+.changeBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.changeBtn:hover {
+    color: var(--color-black);
+}
+
+/* Read-only (pre-filled) input styling */
+.inputLocked {
+    background-color: var(--color-gray-50);
+    border-color: var(--color-gray-100) !important;
+    color: var(--color-gray-700);
+    cursor: default;
+}
+
+.field label,
+.fieldFull label {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.field input,
+.fieldFull input {
+    padding: 0.75rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.paymentOptions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.paymentOption {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.paymentOption.active {
+    border-color: var(--color-black);
+    background-color: var(--color-gray-50);
+}
+
+.paymentOption input {
+    margin-top: 0.25rem;
+    margin-right: 0.75rem;
+}
+
+.paymentOptionGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardDetails {
+    margin-top: -5px;
+    /* Pull up to connect with option above */
+    padding: 1rem;
+    border: 1px solid var(--color-gray-200);
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: var(--color-gray-50);
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure the radio option has rounded corners handled correctly when group is active */
+.paymentOptionGroup .paymentOption {
+    border-radius: 6px;
+}
+
+.paymentOptionGroup.activeGroup .paymentOption {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: transparent;
+    /* Seamless look */
+}
+
+.radioLabel {
+    display: flex;
+    flex-direction: column;
+}
+
+.smallText {
+    font-size: 0.8rem;
+    color: var(--color-gray-500);
+    margin-top: 0.1rem;
+}
+
+.summaryCard {
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 2rem;
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-gray-200);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.placeOrderBtn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding: 1rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.placeOrderBtn:hover {
+    background-color: var(--color-gray-800);
+}
+
+.successContainer,
+.emptyContainer {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    text-decoration: underline;
+}

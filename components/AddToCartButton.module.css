@@ -1,0 +1,137 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 0.6875rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.colorSelection {
+  color: var(--color-gray-500);
+  margin-left: 0.25rem;
+}
+
+.colorsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.colorButton {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 0 0.25rem 0;
+  border: none;
+  background: transparent;
+  color: var(--color-gray-500);
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.colorButton:hover {
+  color: var(--color-black);
+}
+
+.colorButtonSelected {
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  font-weight: 500;
+}
+
+.sizeGuideBtn {
+  font-size: 0.6875rem;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  padding: 0;
+}
+
+.sizeGuideBtn:hover {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.sizesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.sizeButton {
+  padding: 0.625rem 0;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  background: transparent;
+  color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-200);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sizeButton:hover {
+  border-color: var(--color-black);
+}
+
+.sizeButtonSelected {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+  font-weight: 500;
+}
+
+.actionBtn {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  font-family: inherit;
+}
+
+.actionBtnReady {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.actionBtnReady:hover {
+  background-color: var(--color-gray-800);
+}
+
+.actionBtnDisabled {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-500);
+  border-color: var(--color-gray-200);
+  cursor: not-allowed;
+}

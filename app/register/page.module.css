@@ -1,0 +1,172 @@
+.main {
+    min-height: calc(100vh - var(--header-height));
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    /* narrowed for focused aesthetics */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-black);
+    padding-bottom: 0.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* We'll use a grid for multi-column inputs like first/last name */
+.inputGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .inputGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input[type="password"],
+.input#password,
+.input#repeatPassword {
+    text-transform: none;
+}
+
+.input[type="password"] {
+    letter-spacing: 0.2em;
+    /* Spaced out bullets look chic */
+}
+
+.input::placeholder {
+    color: transparent;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input:focus {
+    border-bottom-color: var(--color-black);
+    border-bottom-width: 2px;
+}
+
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    top: -0.5rem;
+    font-size: 0.625rem;
+    color: var(--color-black);
+}
+
+.errorText {
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    font-size: 0.625rem;
+    color: #e00000;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.checkbox {
+    margin-top: 0.15rem;
+    accent-color: var(--color-black);
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+}
+
+.checkboxLabel {
+    font-size: 0.625rem;
+    color: var(--color-gray-500);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.checkboxLabel a {
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
+.actionBtn {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    margin-top: 1rem;
+}
+
+.actionBtn:hover {
+    background-color: var(--color-gray-800);
+}

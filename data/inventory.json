@@ -1,0 +1,1945 @@
+[
+    {
+        "id": "1",
+        "name": "Classic White Tee",
+        "price": 662,
+        "category": "Tops",
+        "image": "/generated/white tee.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 62,
+        "reviews": [
+            {
+                "id": "87s3diz8o",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Jan 25, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "gj29uy5v2",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Dec 19, 2025",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "fnev5yk6a",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Mar 12, 2026",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "208pmhj2c",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Dec 30, 2025",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "6pco54p4z",
+                "reviewer": "Nina K.",
+                "rating": 5,
+                "date": "Dec 31, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "M"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/white_tee_black.jpeg",
+                "/generated/white_tee_black_2.jpeg",
+                "/generated/white_tee_black_3.jpeg",
+                "/generated/white_tee_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/white_tee_white.jpeg",
+                "/generated/white_tee_white_2.jpeg",
+                "/generated/white_tee_white_3.jpeg",
+                "/generated/white_tee_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/white_tee_beige.jpeg",
+                "/generated/white_tee_beige_2.jpeg",
+                "/generated/white_tee_beige_3.jpeg",
+                "/generated/white_tee_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "2",
+        "name": "Silk Camisole",
+        "price": 598,
+        "category": "Tops",
+        "image": "/generated/silk camisole.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.6",
+        "reviewCount": 41,
+        "reviews": [
+            {
+                "id": "myyfsdeq0",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Mar 13, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "yw2hvtl3q",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Feb 4, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "ti35s92y6",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Nov 30, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/silk_camisole_black.jpeg",
+                "/generated/silk_camisole_black_2.jpeg",
+                "/generated/silk_camisole_black_3.jpeg",
+                "/generated/silk_camisole_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/silk_camisole_white.jpeg",
+                "/generated/silk_camisole_white_2.jpeg",
+                "/generated/silk_camisole_white_3.jpeg",
+                "/generated/silk_camisole_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/silk_camisole_beige.jpeg",
+                "/generated/silk_camisole_beige_2.jpeg",
+                "/generated/silk_camisole_beige_3.jpeg",
+                "/generated/silk_camisole_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "3",
+        "name": "Ribbed Knit Sweater",
+        "price": 727,
+        "category": "Tops",
+        "image": "/generated/ribbed knit sweater.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.6",
+        "reviewCount": 67,
+        "reviews": [
+            {
+                "id": "jtxenpu50",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Dec 27, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "z8v71k1dg",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Mar 19, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "408ypqa4j",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Feb 13, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "tv7jq9lar",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Feb 15, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "l5b58rx5t",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Dec 6, 2025",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/ribbed_knit_sweater_black.jpeg",
+                "/generated/ribbed_knit_sweater_black_2.jpeg",
+                "/generated/ribbed_knit_sweater_black_3.jpeg",
+                "/generated/ribbed_knit_sweater_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/ribbed_knit_sweater_white.jpeg",
+                "/generated/ribbed_knit_sweater_white_2.jpeg",
+                "/generated/ribbed_knit_sweater_white_3.jpeg",
+                "/generated/ribbed_knit_sweater_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/ribbed_knit_sweater_beige.jpeg",
+                "/generated/ribbed_knit_sweater_beige_2.jpeg",
+                "/generated/ribbed_knit_sweater_beige_3.jpeg",
+                "/generated/ribbed_knit_sweater_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "4",
+        "name": "Oversized Poplin Shirt",
+        "price": 776,
+        "category": "Tops",
+        "image": "/generated/oversized poplin.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.6",
+        "reviewCount": 56,
+        "reviews": [
+            {
+                "id": "qybtthy5y",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Dec 18, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "25wj5toyj",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Mar 14, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "w2kjeqdvn",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Dec 12, 2025",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "p985wsod1",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Feb 11, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/oversized_poplin_black.jpeg",
+                "/generated/oversized_poplin_black_2.jpeg",
+                "/generated/oversized_poplin_black_3.jpeg",
+                "/generated/oversized_poplin_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/oversized_poplin_white.jpeg",
+                "/generated/oversized_poplin_white_2.jpeg",
+                "/generated/oversized_poplin_white_3.jpeg",
+                "/generated/oversized_poplin_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/oversized_poplin_beige.jpeg",
+                "/generated/oversized_poplin_beige_2.jpeg",
+                "/generated/oversized_poplin_beige_3.jpeg",
+                "/generated/oversized_poplin_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "5",
+        "name": "Off-the-Shoulder Blouse",
+        "price": 776,
+        "category": "Tops",
+        "image": "/generated/off the shoulder.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.8",
+        "reviewCount": 26,
+        "reviews": [
+            {
+                "id": "jddatjeyx",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 1, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "6v394wh8p",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Feb 23, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "L"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/off_the_shoulder_black.jpeg",
+                "/generated/off_the_shoulder_black_2.jpeg",
+                "/generated/off_the_shoulder_black_3.jpeg",
+                "/generated/off_the_shoulder_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/off_the_shoulder_white.jpeg",
+                "/generated/off_the_shoulder_white_2.jpeg",
+                "/generated/off_the_shoulder_white_3.jpeg",
+                "/generated/off_the_shoulder_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/off_the_shoulder_beige.jpeg",
+                "/generated/off_the_shoulder_beige_2.jpeg",
+                "/generated/off_the_shoulder_beige_3.jpeg",
+                "/generated/off_the_shoulder_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "6",
+        "name": "Cropped Cardigan",
+        "price": 766,
+        "category": "Tops",
+        "image": "/generated/cropped cardigan.jpeg",
+        "description": "A classic everyday top designed for effortless elegance. The breathable fabric ensures all-day comfort while maintaining a chic, polished look. Essential for your wardrobe.",
+        "colors": [
+            "Beige",
+            "Black",
+            "Pink"
+        ],
+        "rating": "4.8",
+        "reviewCount": 57,
+        "reviews": [
+            {
+                "id": "i29u3x1bb",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Mar 9, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "j18a54qqk",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Feb 7, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "9i0h84xfu",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 7, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "yg9dyv86m",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Feb 27, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "L"
+            }
+        ],
+        "colorImages": {
+            "Beige": [
+                "/generated/cropped_cardigan_beige.jpeg",
+                "/generated/cropped_cardigan_beige_2.jpeg",
+                "/generated/cropped_cardigan_beige_3.jpeg",
+                "/generated/cropped_cardigan_beige_4.jpeg"
+            ],
+            "Black": [
+                "/generated/cropped_cardigan_black.jpeg",
+                "/generated/cropped_cardigan_black_2.jpeg",
+                "/generated/cropped_cardigan_black_3.jpeg",
+                "/generated/cropped_cardigan_black_4.jpeg"
+            ],
+            "Pink": [
+                "/generated/cropped_cardigan_pink.jpeg",
+                "/generated/cropped_cardigan_pink_2.jpeg",
+                "/generated/cropped_cardigan_pink_3.jpeg",
+                "/generated/cropped_cardigan_pink_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "7",
+        "name": "High-Waist Denim Jeans",
+        "price": 817,
+        "category": "Bottoms",
+        "image": "/generated/highwaist denim jeans.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.9",
+        "reviewCount": 65,
+        "reviews": [
+            {
+                "id": "mfa5mdm6g",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Mar 16, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "3dsrmq5p5",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 11, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "sv0jqb8ug",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Mar 8, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "lzsbi1kyq",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Dec 25, 2025",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "7p1vwfcfa",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Feb 18, 2026",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/highwaist_denim_jeans_black.jpeg",
+                "/generated/highwaist_denim_jeans_black_2.jpeg",
+                "/generated/highwaist_denim_jeans_black_3.jpeg",
+                "/generated/highwaist_denim_jeans_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/highwaist_denim_jeans_white.jpeg",
+                "/generated/highwaist_denim_jeans_white_2.jpeg",
+                "/generated/highwaist_denim_jeans_white_3.jpeg",
+                "/generated/highwaist_denim_jeans_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/highwaist_denim_jeans_beige.jpeg",
+                "/generated/highwaist_denim_jeans_beige_2.jpeg",
+                "/generated/highwaist_denim_jeans_beige_3.jpeg",
+                "/generated/highwaist_denim_jeans_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "8",
+        "name": "Wide Leg Tailored Trousers",
+        "price": 942,
+        "category": "Bottoms",
+        "image": "/generated/wide leg tailored trouser.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.8",
+        "reviewCount": 30,
+        "reviews": [
+            {
+                "id": "mt9lelcwb",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Jan 18, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "txmx4hjt4",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Dec 4, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/wide_leg_tailored_trouser_black.jpeg",
+                "/generated/wide_leg_tailored_trouser_black_2.jpeg",
+                "/generated/wide_leg_tailored_trouser_black_3.jpeg",
+                "/generated/wide_leg_tailored_trouser_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/wide_leg_tailored_trouser_white.jpeg",
+                "/generated/wide_leg_tailored_trouser_white_2.jpeg",
+                "/generated/wide_leg_tailored_trouser_white_3.jpeg",
+                "/generated/wide_leg_tailored_trouser_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/wide_leg_tailored_trouser_beige.jpeg",
+                "/generated/wide_leg_tailored_trouser_beige_2.jpeg",
+                "/generated/wide_leg_tailored_trouser_beige_3.jpeg",
+                "/generated/wide_leg_tailored_trouser_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "9",
+        "name": "Satin Slip Skirt",
+        "price": 1312,
+        "category": "Bottoms",
+        "image": "/generated/satin slip skirt.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 63,
+        "reviews": [
+            {
+                "id": "mcdboq3jf",
+                "reviewer": "Emily W.",
+                "rating": 4,
+                "date": "Dec 11, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "g1q53ffhn",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Jan 2, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "m2awpr8ls",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Feb 24, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "baoflue6f",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Feb 9, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "zy8snb6ks",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Mar 12, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "M"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/satin_slip_skirt_black.jpeg",
+                "/generated/satin_slip_skirt_black_2.jpeg",
+                "/generated/satin_slip_skirt_black_3.jpeg",
+                "/generated/satin_slip_skirt_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/satin_slip_skirt_white.jpeg",
+                "/generated/satin_slip_skirt_white_2.jpeg",
+                "/generated/satin_slip_skirt_white_3.jpeg",
+                "/generated/satin_slip_skirt_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/satin_slip_skirt_beige.jpeg",
+                "/generated/satin_slip_skirt_beige_2.jpeg",
+                "/generated/satin_slip_skirt_beige_3.jpeg",
+                "/generated/satin_slip_skirt_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "10",
+        "name": "Linen Blend Shorts",
+        "price": 983,
+        "category": "Bottoms",
+        "image": "/generated/linen blend shorts.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 29,
+        "reviews": [
+            {
+                "id": "5ig391s2u",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Jan 11, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "32uybw1cq",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Jan 20, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/linen_blend_shorts_black.jpeg",
+                "/generated/linen_blend_shorts_black_2.jpeg",
+                "/generated/linen_blend_shorts_black_3.jpeg",
+                "/generated/linen_blend_shorts_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/linen_blend_shorts_white.jpeg",
+                "/generated/linen_blend_shorts_white_2.jpeg",
+                "/generated/linen_blend_shorts_white_3.jpeg",
+                "/generated/linen_blend_shorts_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/linen_blend_shorts_beige.jpeg",
+                "/generated/linen_blend_shorts_beige_2.jpeg",
+                "/generated/linen_blend_shorts_beige_3.jpeg",
+                "/generated/linen_blend_shorts_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "11",
+        "name": "Faux Leather Leggings",
+        "price": 1464,
+        "category": "Bottoms",
+        "image": "/generated/faux leather leggings.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 61,
+        "reviews": [
+            {
+                "id": "0rr4fjsnh",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Feb 17, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "wqbwflmt2",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Jan 21, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "gi7auv0r9",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 21, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "cdtswiuop",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Mar 22, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "45zw1v0ps",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Jan 4, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/faux_leather_leggings_black.jpeg",
+                "/generated/faux_leather_leggings_black_2.jpeg",
+                "/generated/faux_leather_leggings_black_3.jpeg",
+                "/generated/faux_leather_leggings_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/faux_leather_leggings_white.jpeg",
+                "/generated/faux_leather_leggings_white_2.jpeg",
+                "/generated/faux_leather_leggings_white_3.jpeg",
+                "/generated/faux_leather_leggings_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/faux_leather_leggings_beige.jpeg",
+                "/generated/faux_leather_leggings_beige_2.jpeg",
+                "/generated/faux_leather_leggings_beige_3.jpeg",
+                "/generated/faux_leather_leggings_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "12",
+        "name": "Pleated Midi Skirt",
+        "price": 1472,
+        "category": "Bottoms",
+        "image": "/generated/pleated mini skirt.jpeg",
+        "description": "Versatile bottoms offering both support and flexibility. Designed with a flattering silhouette that curves with you. A must-have for every season.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.5",
+        "reviewCount": 42,
+        "reviews": [
+            {
+                "id": "73ugiyp7z",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 11, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "atv01alqn",
+                "reviewer": "Nina K.",
+                "rating": 5,
+                "date": "Feb 3, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "ek593yf2v",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Dec 30, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/pleated_mini_skirt_black.jpeg",
+                "/generated/pleated_mini_skirt_black_2.jpeg",
+                "/generated/pleated_mini_skirt_black_3.jpeg",
+                "/generated/pleated_mini_skirt_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/pleated_mini_skirt_white.jpeg",
+                "/generated/pleated_mini_skirt_white_2.jpeg",
+                "/generated/pleated_mini_skirt_white_3.jpeg",
+                "/generated/pleated_mini_skirt_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/pleated_mini_skirt_beige.jpeg",
+                "/generated/pleated_mini_skirt_beige_2.jpeg",
+                "/generated/pleated_mini_skirt_beige_3.jpeg",
+                "/generated/pleated_mini_skirt_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "13",
+        "name": "Linen Blend Dress",
+        "price": 1006,
+        "category": "Dresses",
+        "image": "/generated/13_linen_blend_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "5.0",
+        "reviewCount": 37,
+        "reviews": [
+            {
+                "id": "tv0v6znq9",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Dec 3, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "9758kd3gb",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Dec 2, 2025",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "aru646lcl",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Jan 29, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/13_linen_blend_dress_black.jpeg",
+                "/generated/13_linen_blend_dress_black_2.jpeg",
+                "/generated/13_linen_blend_dress_black_3.jpeg",
+                "/generated/13_linen_blend_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/13_linen_blend_dress_white.jpeg",
+                "/generated/13_linen_blend_dress_white_2.jpeg",
+                "/generated/13_linen_blend_dress_white_3.jpeg",
+                "/generated/13_linen_blend_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/13_linen_blend_dress_beige.jpeg",
+                "/generated/13_linen_blend_dress_beige_2.jpeg",
+                "/generated/13_linen_blend_dress_beige_3.jpeg",
+                "/generated/13_linen_blend_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "14",
+        "name": "Floral Maxi Dress",
+        "price": 1648,
+        "category": "Dresses",
+        "image": "/generated/14_floral_maxi_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 66,
+        "reviews": [
+            {
+                "id": "xxigkg9o7",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Dec 22, 2025",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "g4ho5o0id",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Jan 8, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "pg3hch12q",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Feb 15, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "pvya9irp0",
+                "reviewer": "Emily W.",
+                "rating": 4,
+                "date": "Mar 12, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "r3g23ly8f",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Jan 30, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/14_floral_maxi_dress_black.jpeg",
+                "/generated/14_floral_maxi_dress_black_2.jpeg",
+                "/generated/14_floral_maxi_dress_black_3.jpeg",
+                "/generated/14_floral_maxi_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/14_floral_maxi_dress_white.jpeg",
+                "/generated/14_floral_maxi_dress_white_2.jpeg",
+                "/generated/14_floral_maxi_dress_white_3.jpeg",
+                "/generated/14_floral_maxi_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/14_floral_maxi_dress_beige.jpeg",
+                "/generated/14_floral_maxi_dress_beige_2.jpeg",
+                "/generated/14_floral_maxi_dress_beige_3.jpeg",
+                "/generated/14_floral_maxi_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "15",
+        "name": "Ribbed Midi Knit Dress",
+        "price": 1213,
+        "category": "Dresses",
+        "image": "/generated/15_ribbed_midi_knit_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 38,
+        "reviews": [
+            {
+                "id": "llzry57cp",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Mar 13, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "5n19w60my",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Jan 3, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "8qevtyer1",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Dec 5, 2025",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/15_ribbed_midi_knit_dress_black.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_black_2.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_black_3.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/15_ribbed_midi_knit_dress_white.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_white_2.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_white_3.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/15_ribbed_midi_knit_dress_beige.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_beige_2.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_beige_3.jpeg",
+                "/generated/15_ribbed_midi_knit_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "16",
+        "name": "Satin Wrap Dress",
+        "price": 1178,
+        "category": "Dresses",
+        "image": "/generated/16_satin_wrap_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.8",
+        "reviewCount": 62,
+        "reviews": [
+            {
+                "id": "t1sl5ve3s",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Dec 10, 2025",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "9ejn5i7mi",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Feb 18, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "ycm2u6f70",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Feb 1, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "haihhi1nd",
+                "reviewer": "Sarah M.",
+                "rating": 4,
+                "date": "Feb 5, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "eoz8tk4rq",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Dec 25, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "L"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/16_satin_wrap_dress_black.jpeg",
+                "/generated/16_satin_wrap_dress_black_2.jpeg",
+                "/generated/16_satin_wrap_dress_black_3.jpeg",
+                "/generated/16_satin_wrap_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/16_satin_wrap_dress_white.jpeg",
+                "/generated/16_satin_wrap_dress_white_2.jpeg",
+                "/generated/16_satin_wrap_dress_white_3.jpeg",
+                "/generated/16_satin_wrap_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/16_satin_wrap_dress_beige.jpeg",
+                "/generated/16_satin_wrap_dress_beige_2.jpeg",
+                "/generated/16_satin_wrap_dress_beige_3.jpeg",
+                "/generated/16_satin_wrap_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "17",
+        "name": "Halter Neck Mini Dress",
+        "price": 1157,
+        "category": "Dresses",
+        "image": "/generated/17_halter_neck_mini_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.9",
+        "reviewCount": 40,
+        "reviews": [
+            {
+                "id": "aonxo52y2",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Feb 5, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "kzgco6neu",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Dec 22, 2025",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "tfdmcskte",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Mar 7, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/17_halter_neck_mini_dress_black.jpeg",
+                "/generated/17_halter_neck_mini_dress_black_2.jpeg",
+                "/generated/17_halter_neck_mini_dress_black_3.jpeg",
+                "/generated/17_halter_neck_mini_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/17_halter_neck_mini_dress_white.jpeg",
+                "/generated/17_halter_neck_mini_dress_white_2.jpeg",
+                "/generated/17_halter_neck_mini_dress_white_3.jpeg",
+                "/generated/17_halter_neck_mini_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/17_halter_neck_mini_dress_beige.jpeg",
+                "/generated/17_halter_neck_mini_dress_beige_2.jpeg",
+                "/generated/17_halter_neck_mini_dress_beige_3.jpeg",
+                "/generated/17_halter_neck_mini_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "18",
+        "name": "Long Sleeve Shift Dress",
+        "price": 1768,
+        "category": "Dresses",
+        "image": "/generated/18_long_sleeve_shift_dress.svg",
+        "description": "Flowing dress designed for effortless elegance. Features a relaxed silhouette. Perfect for warm days and vacation styling. Comfortable and chic.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.6",
+        "reviewCount": 66,
+        "reviews": [
+            {
+                "id": "b9lno8hpo",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Jan 25, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "y8rk3ff5a",
+                "reviewer": "Nina K.",
+                "rating": 5,
+                "date": "Nov 28, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "222hhd1y9",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Jan 24, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "yu99uyisr",
+                "reviewer": "Emily W.",
+                "rating": 4,
+                "date": "Jan 18, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "fsnxj2jko",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Dec 20, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/18_long_sleeve_shift_dress_black.jpeg",
+                "/generated/18_long_sleeve_shift_dress_black_2.jpeg",
+                "/generated/18_long_sleeve_shift_dress_black_3.jpeg",
+                "/generated/18_long_sleeve_shift_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/18_long_sleeve_shift_dress_white.jpeg",
+                "/generated/18_long_sleeve_shift_dress_white_2.jpeg",
+                "/generated/18_long_sleeve_shift_dress_white_3.jpeg",
+                "/generated/18_long_sleeve_shift_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/18_long_sleeve_shift_dress_beige.jpeg",
+                "/generated/18_long_sleeve_shift_dress_beige_2.jpeg",
+                "/generated/18_long_sleeve_shift_dress_beige_3.jpeg",
+                "/generated/18_long_sleeve_shift_dress_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "19",
+        "name": "Gold Hoop Earrings",
+        "price": 281,
+        "category": "Accessories",
+        "image": "/generated/gold loop.jpeg",
+        "description": "Timeless accessory that adds a touch of sophistication to any outfit. Lightweight and perfect for daily wear. The ideal finishing touch for any look.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 42,
+        "reviews": [
+            {
+                "id": "nsyo45ng7",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Jan 1, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "r9dduxj25",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Feb 25, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "u6lf56s4v",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Jan 21, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "M"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/gold_loop_black.jpeg",
+                "/generated/gold_loop_black_2.jpeg",
+                "/generated/gold_loop_black_3.jpeg",
+                "/generated/gold_loop_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/gold_loop_white.jpeg",
+                "/generated/gold_loop_white_2.jpeg",
+                "/generated/gold_loop_white_3.jpeg",
+                "/generated/gold_loop_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/gold_loop_beige.jpeg",
+                "/generated/gold_loop_beige_2.jpeg",
+                "/generated/gold_loop_beige_3.jpeg",
+                "/generated/gold_loop_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "20",
+        "name": "Oversized Sunglasses",
+        "price": 250,
+        "category": "Accessories",
+        "image": "/generated/oversized sunglasses.jpeg",
+        "description": "Timeless accessory that adds a touch of sophistication to any outfit. Lightweight and perfect for daily wear. The ideal finishing touch for any look.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 42,
+        "reviews": [
+            {
+                "id": "4h2g7b7sy",
+                "reviewer": "Emily W.",
+                "rating": 4,
+                "date": "Feb 23, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "21nvbhyrr",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Mar 19, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "zeq5gi3ut",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Jan 13, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/oversized_sunglasses_black.jpeg",
+                "/generated/oversized_sunglasses_black_2.jpeg",
+                "/generated/oversized_sunglasses_black_3.jpeg",
+                "/generated/oversized_sunglasses_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/oversized_sunglasses_white.jpeg",
+                "/generated/oversized_sunglasses_white_2.jpeg",
+                "/generated/oversized_sunglasses_white_3.jpeg",
+                "/generated/oversized_sunglasses_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/oversized_sunglasses_beige.jpeg",
+                "/generated/oversized_sunglasses_beige_2.jpeg",
+                "/generated/oversized_sunglasses_beige_3.jpeg",
+                "/generated/oversized_sunglasses_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "21",
+        "name": "Layered Chain Necklace",
+        "price": 219,
+        "category": "Accessories",
+        "image": "/generated/layered necklace.jpeg",
+        "description": "Timeless accessory that adds a touch of sophistication to any outfit. Lightweight and perfect for daily wear. The ideal finishing touch for any look.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.5",
+        "reviewCount": 65,
+        "reviews": [
+            {
+                "id": "68wyaqaog",
+                "reviewer": "Emily W.",
+                "rating": 4,
+                "date": "Dec 20, 2025",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "73m9z8v2u",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Dec 31, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "e27f7bh6x",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Mar 4, 2026",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "r6zz1urzb",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Jan 13, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "obax2azuk",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Mar 12, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/layered_necklace_black.jpeg",
+                "/generated/layered_necklace_black_2.jpeg",
+                "/generated/layered_necklace_black_3.jpeg",
+                "/generated/layered_necklace_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/layered_necklace_white.jpeg",
+                "/generated/layered_necklace_white_2.jpeg",
+                "/generated/layered_necklace_white_3.jpeg",
+                "/generated/layered_necklace_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/layered_necklace_beige.jpeg",
+                "/generated/layered_necklace_beige_2.jpeg",
+                "/generated/layered_necklace_beige_3.jpeg",
+                "/generated/layered_necklace_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "23",
+        "name": "Silk Hair Scarf",
+        "price": 273,
+        "category": "Accessories",
+        "image": "/generated/hair scarf.jpeg",
+        "description": "Timeless accessory that adds a touch of sophistication to any outfit. Lightweight and perfect for daily wear. The ideal finishing touch for any look.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.6",
+        "reviewCount": 60,
+        "reviews": [
+            {
+                "id": "pyhdr849c",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Feb 16, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "gkmn13dg4",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Dec 14, 2025",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "i9o7x3iet",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Dec 20, 2025",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "cl2txheym",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Jan 1, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "61w4h71vf",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Dec 30, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "S"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/hair_scarf_black.jpeg",
+                "/generated/hair_scarf_black_2.jpeg",
+                "/generated/hair_scarf_black_3.jpeg",
+                "/generated/hair_scarf_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/hair_scarf_white.jpeg",
+                "/generated/hair_scarf_white_2.jpeg",
+                "/generated/hair_scarf_white_3.jpeg",
+                "/generated/hair_scarf_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/hair_scarf_beige.jpeg",
+                "/generated/hair_scarf_beige_2.jpeg",
+                "/generated/hair_scarf_beige_3.jpeg",
+                "/generated/hair_scarf_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "24",
+        "name": "Chunky Bracelets",
+        "price": 170,
+        "category": "Accessories",
+        "image": "/generated/chunky bracelet.jpeg",
+        "description": "Timeless accessory that adds a touch of sophistication to any outfit. Lightweight and perfect for daily wear. The ideal finishing touch for any look.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 68,
+        "reviews": [
+            {
+                "id": "m1g6uiuf7",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Nov 29, 2025",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "7wg8o5r6t",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Feb 3, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "hngjdkln7",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Dec 21, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "pcjphpr9p",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Jan 14, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "unb9alq0z",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Feb 27, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "M"
+            }
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/chunky_bracelet_black.jpeg",
+                "/generated/chunky_bracelet_black_2.jpeg",
+                "/generated/chunky_bracelet_black_3.jpeg",
+                "/generated/chunky_bracelet_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/chunky_bracelet_white.jpeg",
+                "/generated/chunky_bracelet_white_2.jpeg",
+                "/generated/chunky_bracelet_white_3.jpeg",
+                "/generated/chunky_bracelet_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/chunky_bracelet_beige.jpeg",
+                "/generated/chunky_bracelet_beige_2.jpeg",
+                "/generated/chunky_bracelet_beige_3.jpeg",
+                "/generated/chunky_bracelet_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "25",
+        "name": "Tweed Cropped Blazer",
+        "price": 946,
+        "category": "New Arrival",
+        "image": "/generated/tweed cropped blazer.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "5.0",
+        "reviewCount": 42,
+        "reviews": [
+            {
+                "id": "lbrqg2pm0",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Jan 9, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "ttyaq03hx",
+                "reviewer": "Jasmine L.",
+                "rating": 4,
+                "date": "Feb 4, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "yutqljxig",
+                "reviewer": "Amanda R.",
+                "rating": 5,
+                "date": "Jan 12, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "M"
+            }
+        ],
+        "isNewArrival": true,
+        "colorImages": {
+            "Black": [
+                "/generated/tweed_cropped_blazer_black.jpeg",
+                "/generated/tweed_cropped_blazer_black_2.jpeg",
+                "/generated/tweed_cropped_blazer_black_3.jpeg",
+                "/generated/tweed_cropped_blazer_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/tweed_cropped_blazer_white.jpeg",
+                "/generated/tweed_cropped_blazer_white_2.jpeg",
+                "/generated/tweed_cropped_blazer_white_3.jpeg",
+                "/generated/tweed_cropped_blazer_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/tweed_cropped_blazer_beige.jpeg",
+                "/generated/tweed_cropped_blazer_beige_2.jpeg",
+                "/generated/tweed_cropped_blazer_beige_3.jpeg",
+                "/generated/tweed_cropped_blazer_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "26",
+        "name": "Asymmetric Hem Skirt",
+        "price": 1329,
+        "category": "Bottoms",
+        "image": "/generated/assymetric_hem_skirt_black.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "Beige",
+            "Red"
+        ],
+        "colorImages": {
+            "Black": [
+                "/generated/assymetric_hem_skirt_black.jpeg",
+                "/generated/assymetric_hem_skirt_black_2.jpeg",
+                "/generated/assymetric_hem_skirt_black_3.jpeg",
+                "/generated/assymetric_hem_skirt_black_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/assymetric_hem_skirt_beige.jpeg",
+                "/generated/assymetric_hem_skirt_beige_2.jpeg",
+                "/generated/assymetric_hem_skirt_beige_3.jpeg",
+                "/generated/assymetric_hem_skirt_beige_4.jpeg"
+            ],
+            "Red": [
+                "/generated/assymetric_hem_skirt_red.jpeg",
+                "/generated/assymetric_hem_skirt_red_2.jpeg",
+                "/generated/assymetric_hem_skirt_red_3.jpeg",
+                "/generated/assymetric_hem_skirt_red_4.jpeg"
+            ]
+        },
+        "rating": "4.7",
+        "reviewCount": 28,
+        "reviews": [
+            {
+                "id": "9a755otd1",
+                "reviewer": "Chloe S.",
+                "rating": 5,
+                "date": "Jan 17, 2026",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "6svvhw5rt",
+                "reviewer": "Nina K.",
+                "rating": 5,
+                "date": "Mar 10, 2026",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "S"
+            }
+        ],
+        "isNewArrival": true
+    },
+    {
+        "id": "27",
+        "name": "Velvet Evening Gown",
+        "price": 1157,
+        "category": "New Arrival",
+        "image": "/generated/velvet evening gown.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 66,
+        "reviews": [
+            {
+                "id": "6nvoe8wnk",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Jan 31, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "qplwm16ok",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Jan 28, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "a3cbr0d31",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Mar 3, 2026",
+                "comment": "Beautiful design and very fast shipping. Will definitely buy from CurvyChiQ again!",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "mspdvftxa",
+                "reviewer": "Nina K.",
+                "rating": 5,
+                "date": "Jan 26, 2026",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "S"
+            },
+            {
+                "id": "jd8udhtdy",
+                "reviewer": "Sarah M.",
+                "rating": 5,
+                "date": "Dec 28, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "isNewArrival": true,
+        "colorImages": {
+            "Black": [
+                "/generated/velvet_evening_gown_black.jpeg",
+                "/generated/velvet_evening_gown_black_2.jpeg",
+                "/generated/velvet_evening_gown_black_3.jpeg",
+                "/generated/velvet_evening_gown_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/velvet_evening_gown_white.jpeg",
+                "/generated/velvet_evening_gown_white_2.jpeg",
+                "/generated/velvet_evening_gown_white_3.jpeg",
+                "/generated/velvet_evening_gown_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/velvet_evening_gown_beige.jpeg",
+                "/generated/velvet_evening_gown_beige_2.jpeg",
+                "/generated/velvet_evening_gown_beige_3.jpeg",
+                "/generated/velvet_evening_gown_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "28",
+        "name": "Cashmere Blend Poncho",
+        "price": 1860,
+        "category": "New Arrival",
+        "image": "/generated/cashmere blend poncho.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.7",
+        "reviewCount": 48,
+        "reviews": [
+            {
+                "id": "64ohn0tl5",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Nov 29, 2025",
+                "comment": "I've gotten so many compliments on this piece! It makes me feel so confident.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "z2iciardv",
+                "reviewer": "Chloe S.",
+                "rating": 4,
+                "date": "Mar 13, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "XXL"
+            },
+            {
+                "id": "0tzrlpb05",
+                "reviewer": "Nina K.",
+                "rating": 4,
+                "date": "Dec 8, 2025",
+                "comment": "My favorite piece in my closet right now. It washes really well and hasn't shrunk.",
+                "sizePurchased": "M"
+            },
+            {
+                "id": "zojrxjfbh",
+                "reviewer": "Amanda R.",
+                "rating": 4,
+                "date": "Dec 22, 2025",
+                "comment": "True to size, the color is exactly like the picture. Very flattering on my curves!",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "isNewArrival": true,
+        "colorImages": {
+            "Black": [
+                "/generated/cashmere_blend_poncho_black.jpeg",
+                "/generated/cashmere_blend_poncho_black_2.jpeg",
+                "/generated/cashmere_blend_poncho_black_3.jpeg",
+                "/generated/cashmere_blend_poncho_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/cashmere_blend_poncho_white.jpeg",
+                "/generated/cashmere_blend_poncho_white_2.jpeg",
+                "/generated/cashmere_blend_poncho_white_3.jpeg",
+                "/generated/cashmere_blend_poncho_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/cashmere_blend_poncho_beige.jpeg",
+                "/generated/cashmere_blend_poncho_beige_2.jpeg",
+                "/generated/cashmere_blend_poncho_beige_3.jpeg",
+                "/generated/cashmere_blend_poncho_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "29",
+        "name": "Distressed Denim Jacket",
+        "price": 1887,
+        "category": "New Arrival",
+        "image": "/generated/distressed denim jacket.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.8",
+        "reviewCount": 25,
+        "reviews": [
+            {
+                "id": "gs0f3k5io",
+                "reviewer": "Jessica T.",
+                "rating": 4,
+                "date": "Mar 19, 2026",
+                "comment": "A bit snug initially but stretched to fit perfectly. Great quality overall.",
+                "sizePurchased": "L"
+            },
+            {
+                "id": "vug7vzdla",
+                "reviewer": "Jasmine L.",
+                "rating": 5,
+                "date": "Mar 21, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XL"
+            }
+        ],
+        "isNewArrival": true,
+        "colorImages": {
+            "Black": [
+                "/generated/distressed_denim_jacket_black.jpeg",
+                "/generated/distressed_denim_jacket_black_2.jpeg",
+                "/generated/distressed_denim_jacket_black_3.jpeg",
+                "/generated/distressed_denim_jacket_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/distressed_denim_jacket_white.jpeg",
+                "/generated/distressed_denim_jacket_white_2.jpeg",
+                "/generated/distressed_denim_jacket_white_3.jpeg",
+                "/generated/distressed_denim_jacket_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/distressed_denim_jacket_beige.jpeg",
+                "/generated/distressed_denim_jacket_beige_2.jpeg",
+                "/generated/distressed_denim_jacket_beige_3.jpeg",
+                "/generated/distressed_denim_jacket_beige_4.jpeg"
+            ]
+        }
+    },
+    {
+        "id": "30",
+        "name": "Sequined Party Dress",
+        "price": 1676,
+        "category": "New Arrival",
+        "image": "/generated/sequined party dress.jpeg",
+        "description": "The latest addition to our collection. Combining modern silhouettes with premium fabrics. Get this exclusive piece and stand out from the crowd.",
+        "colors": [
+            "Black",
+            "White",
+            "Beige"
+        ],
+        "rating": "4.5",
+        "reviewCount": 25,
+        "reviews": [
+            {
+                "id": "6z9f4124b",
+                "reviewer": "Emily W.",
+                "rating": 5,
+                "date": "Dec 31, 2025",
+                "comment": "Material feels very premium. Highly recommend for the price.",
+                "sizePurchased": "XL"
+            },
+            {
+                "id": "px67z6fwa",
+                "reviewer": "Jessica T.",
+                "rating": 5,
+                "date": "Jan 23, 2026",
+                "comment": "Love the fit! Super comfortable and stylish, perfect for daily wear.",
+                "sizePurchased": "XXL"
+            }
+        ],
+        "isNewArrival": true,
+        "colorImages": {
+            "Black": [
+                "/generated/sequined_party_dress_black.jpeg",
+                "/generated/sequined_party_dress_black_2.jpeg",
+                "/generated/sequined_party_dress_black_3.jpeg",
+                "/generated/sequined_party_dress_black_4.jpeg"
+            ],
+            "White": [
+                "/generated/sequined_party_dress_white.jpeg",
+                "/generated/sequined_party_dress_white_2.jpeg",
+                "/generated/sequined_party_dress_white_3.jpeg",
+                "/generated/sequined_party_dress_white_4.jpeg"
+            ],
+            "Beige": [
+                "/generated/sequined_party_dress_beige.jpeg",
+                "/generated/sequined_party_dress_beige_2.jpeg",
+                "/generated/sequined_party_dress_beige_3.jpeg",
+                "/generated/sequined_party_dress_beige_4.jpeg"
+            ]
+        }
+    }
+]
