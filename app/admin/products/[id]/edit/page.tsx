@@ -1,4 +1,5 @@
-import { getProductById, updateProduct } from '@/app/actions';
+import { updateProduct } from '@/app/actions';
+import { getProductById } from '@/db/queries';
 import { redirect } from 'next/navigation';
 
 export default async function EditProductPage(props: { params: Promise<{ id: string }> }) {
@@ -77,7 +78,7 @@ export default async function EditProductPage(props: { params: Promise<{ id: str
                         type="text"
                         id="image"
                         name="image"
-                        defaultValue={product.image}
+                        defaultValue={product.image ?? ''}
                         className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none"
                     />
                 </div>

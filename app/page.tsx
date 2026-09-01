@@ -1,11 +1,13 @@
 import Header from '@/components/Header';
-import { getProducts } from './actions';
+import { getNewArrivals } from '@/db/queries';
 import styles from './page.module.css';
 import ProductCard from '@/components/ProductCard';
 
+// Stock and prices change in the database, so the homepage is never baked at build time.
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
-  const allProducts = await getProducts();
-  const newArrivals = allProducts.filter(p => p.isNewArrival || p.category === 'New Arrival' || p.category === 'Tops');
+  const newArrivals = await getNewArrivals();
 
   return (
     <main className={styles.main}>

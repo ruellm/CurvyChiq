@@ -1,31 +1,48 @@
 import Header from '@/components/Header';
-import { getProducts } from '@/app/actions';
+import { getCategoryBySlug, getNewArrivals, getProductsByCategory } from '@/db/queries';
 import styles from '@/app/page.module.css';
 import ProductCard from '@/components/ProductCard';
+import { notFound } from 'next/navigation';
+
+const NEW_ARRIVAL_SLUG = 'new-arrival';
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const categoryName = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' '); 
-    const allProducts = await getProducts();
 
-    const categoryProducts = allProducts.filter(p =>
-        p.category.toLowerCase() === categoryName.toLowerCase() ||
-        p.category.toLowerCase() === slug.replace(/-/g, ' ').toLowerCase() ||
-        (slug.toLowerCase() === 'new-arrival' && p.isNewArrival)
-    );
+    // New Arrival is not a category, it is a flag on the product.
+    if (slug === NEW_ARRIVAL_SLUG) {
+        const products = await getNewArrivals();
+        return <CategoryView title="New Arrival" products={products} />;
+    }
 
+    const category = await getCategoryBySlug(slug);
+    if (!category) {
+        notFound();
+    }
+
+    const products = await getProductsByCategory(category.slug);
+    return <CategoryView title={category.name} products={products} />;
+}
+
+function CategoryView({
+    title,
+    products,
+}: {
+    title: string;
+    products: Awaited<ReturnType<typeof getNewArrivals>>;
+}) {
     return (
         <main className={styles.main}>
             <Header />
 
             <section className="container" style={{ paddingTop: '50px' }}>
                 <div className={styles.sectionHeader}>
-                    <h2>{categoryName}</h2>
+                    <h2>{title}</h2>
                 </div>
 
-                {categoryProducts.length > 0 ? (
+                {products.length > 0 ? (
                     <div className={styles.productGrid}>
-                        {categoryProducts.map((product) => (
+                        {products.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))}
                     </div>

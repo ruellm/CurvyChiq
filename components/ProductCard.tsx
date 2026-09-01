@@ -18,18 +18,20 @@ export default function ProductCard({ product }: { product: any }) {
         }
     };
 
-    const slug = product.name.toLowerCase().replace(/ /g, '-');
-
     return (
         <div className={styles.productCard}>
-            <Link href={`/product/${slug}`} className={styles.imagePlaceholder}>
-                <Image
-                    src={currentImage}
-                    alt={product.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
+            {/* Slug is stored, never derived from the name. */}
+            <Link href={`/product/${product.slug}`} className={styles.imagePlaceholder}>
+                {/* 6 products have no photo yet. The wrapper keeps the grid cell, no broken img. */}
+                {currentImage && (
+                    <Image
+                        src={currentImage}
+                        alt={product.name}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                )}
             </Link>
             <div className={styles.productInfo}>
                 <h3 className={styles.productName}>{product.name}</h3>

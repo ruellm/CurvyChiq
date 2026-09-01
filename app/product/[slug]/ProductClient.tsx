@@ -42,10 +42,13 @@ export default function ProductClient({ product }: { product: any }) {
     // Determine the primary image for this color
     const currentMainImage = Array.isArray(colorEntry) ? colorEntry[0] : (colorEntry || product.image);
     
-    // Determine the gallery images — use color-specific array if available, else static repeat
-    const galleryImages = Array.isArray(colorEntry) 
-        ? colorEntry 
-        : [currentMainImage, currentMainImage, currentMainImage, currentMainImage];
+    // Determine the gallery images — use color-specific array if available, else static repeat.
+    // A product with no photo yet renders no gallery rather than a broken image.
+    const galleryImages: string[] = Array.isArray(colorEntry)
+        ? colorEntry
+        : currentMainImage
+            ? [currentMainImage, currentMainImage, currentMainImage, currentMainImage]
+            : [];
 
     const handleAddToCart = () => {
         addItem({

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { getProducts, deleteProduct } from '@/app/actions';
+import { deleteProduct } from '@/app/actions';
+import { getProducts } from '@/db/queries';
 import Image from 'next/image';
 
 export default async function AdminDashboard() {
@@ -33,12 +34,14 @@ export default async function AdminDashboard() {
                             <tr key={product.id} className="hover:bg-gray-50 border-b last:border-0">
                                 <td className="p-4">
                                     <div className="relative w-16 h-16 rounded overflow-hidden bg-gray-100">
-                                        <Image
-                                            src={product.image}
-                                            alt={product.name}
-                                            fill
-                                            className="object-cover"
-                                        />
+                                        {product.image && (
+                                            <Image
+                                                src={product.image}
+                                                alt={product.name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        )}
                                     </div>
                                 </td>
                                 <td className="p-4 font-medium text-gray-800">{product.name}</td>
