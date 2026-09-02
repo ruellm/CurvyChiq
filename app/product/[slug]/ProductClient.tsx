@@ -37,7 +37,21 @@ function isSellable(v: Variant): boolean {
     return v.isActive && v.stockQty > 0;
 }
 
-export default function ProductClient({ product }: { product: Product }) {
+// Renders both grid columns so that .productLayout gets exactly two children and
+// .interactiveSection sits inside .detailsContainer, which is the tree product.module.css
+// was written for. The gallery stays in here because it reacts to the selected colour.
+// info and reviews stay server components and arrive as separate slots, because they sit
+// either side of the interactive section: .options and .reviewsContainer each carry a
+// border-top that has to divide real content.
+export default function ProductClient({
+    product,
+    info,
+    reviews,
+}: {
+    product: Product;
+    info: React.ReactNode;
+    reviews: React.ReactNode;
+}) {
     const { addItem, setIsCartOpen } = useCart();
 
     const variants = product.variants ?? [];
@@ -128,102 +142,108 @@ export default function ProductClient({ product }: { product: Product }) {
                 ))}
             </div>
 
-            <div className={styles.interactiveSection}>
-                {!isAccessory && (
-                    <div className={styles.options}>
-                        {/* Color Swatches */}
-                        <div className={styles.optionGroup}>
-                            <p className={styles.optionTitle}>
-                                Color | <strong>{selectedColor}</strong>
-                                {soldOutColors.has(selectedColor) && (
-                                    <span className={styles.soldOutNote}> Sold out</span>
-                                )}
-                            </p>
-                            <div className={styles.colorList}>
-                                {colors.map((color: string) => {
-                                    const hex = getColorHex(color);
-                                    const isSelected = selectedColor === color;
-                                    const isLight = ['white', 'cream', 'beige', 'yellow'].includes(color.toLowerCase());
-                                    const isSoldOut = soldOutColors.has(color);
-                                    return (
-                                        <button
-                                            key={color}
-                                            onClick={() => handleColorSelect(color)}
-                                            title={isSoldOut ? `${color} — sold out` : color}
-                                            className={isSoldOut ? styles.colorSoldOut : undefined}
-                                            style={{
-                                                width: '28px',
-                                                height: '28px',
-                                                borderRadius: '50%',
-                                                backgroundColor: hex,
-                                                border: isLight ? '1px solid #ccc' : '1px solid transparent',
-                                                outline: isSelected ? `2px solid #000` : '2px solid transparent',
-                                                outlineOffset: '2px',
-                                                cursor: 'pointer',
-                                                transition: 'outline 0.15s ease, transform 0.15s ease',
-                                                transform: isSelected ? 'scale(1.15)' : 'scale(1)',
-                                                padding: 0,
-                                                flexShrink: 0,
-                                            }}
-                                            aria-label={isSoldOut ? `${color}, sold out` : color}
-                                        />
-                                    );
-                                })}
+            <div className={styles.detailsContainer}>
+                {info}
+
+                <div className={styles.interactiveSection}>
+                    {!isAccessory && (
+                        <div className={styles.options}>
+                            {/* Color Swatches */}
+                            <div className={styles.optionGroup}>
+                                <p className={styles.optionTitle}>
+                                    Color | <strong>{selectedColor}</strong>
+                                    {soldOutColors.has(selectedColor) && (
+                                        <span className={styles.soldOutNote}> Sold out</span>
+                                    )}
+                                </p>
+                                <div className={styles.colorList}>
+                                    {colors.map((color: string) => {
+                                        const hex = getColorHex(color);
+                                        const isSelected = selectedColor === color;
+                                        const isLight = ['white', 'cream', 'beige', 'yellow'].includes(color.toLowerCase());
+                                        const isSoldOut = soldOutColors.has(color);
+                                        return (
+                                            <button
+                                                key={color}
+                                                onClick={() => handleColorSelect(color)}
+                                                title={isSoldOut ? `${color} — sold out` : color}
+                                                className={isSoldOut ? styles.colorSoldOut : undefined}
+                                                style={{
+                                                    width: '28px',
+                                                    height: '28px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: hex,
+                                                    border: isLight ? '1px solid #ccc' : '1px solid transparent',
+                                                    outline: isSelected ? `2px solid #000` : '2px solid transparent',
+                                                    outlineOffset: '2px',
+                                                    cursor: 'pointer',
+                                                    transition: 'outline 0.15s ease, transform 0.15s ease',
+                                                    transform: isSelected ? 'scale(1.15)' : 'scale(1)',
+                                                    padding: 0,
+                                                    flexShrink: 0,
+                                                }}
+                                                aria-label={isSoldOut ? `${color}, sold out` : color}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            {/* Size Selector */}
+                            <div className={styles.optionGroup} style={{ marginTop: '1rem' }}>
+                                <p className={styles.optionTitle} style={{ borderBottom: '1px solid #eaeaea', paddingBottom: '0.5rem', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    Size
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsSizeChartOpen(true)}
+                                        className={btnStyles.sizeGuideBtn}
+                                    >
+                                        Size Guide
+                                    </button>
+                                </p>
+                                <div className={styles.sizeList}>
+                                    {sizesForColor.map((variant) => {
+                                        const available = isSellable(variant);
+                                        const isSelected = selectedSize === variant.size;
+                                        return (
+                                            <button
+                                                key={variant.size}
+                                                onClick={() => setSelectedSize(variant.size)}
+                                                disabled={!available}
+                                                aria-disabled={!available}
+                                                className={
+                                                    !available
+                                                        ? styles.sizeSoldOut
+                                                        : isSelected
+                                                            ? styles.sizeActive
+                                                            : styles.sizeBtn
+                                                }
+                                            >
+                                                {variant.size}
+                                                {!available && <span className={styles.soldOutNote}>Sold out</span>}
+                                                {available && !isSelected && <span style={{ opacity: 0.3 }}>+</span>}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
+                    )}
 
-                        {/* Size Selector */}
-                        <div className={styles.optionGroup} style={{ marginTop: '1rem' }}>
-                            <p className={styles.optionTitle} style={{ borderBottom: '1px solid #eaeaea', paddingBottom: '0.5rem', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                Size
-                                <button
-                                    type="button"
-                                    onClick={() => setIsSizeChartOpen(true)}
-                                    className={btnStyles.sizeGuideBtn}
-                                >
-                                    Size Guide
-                                </button>
-                            </p>
-                            <div className={styles.sizeList}>
-                                {sizesForColor.map((variant) => {
-                                    const available = isSellable(variant);
-                                    const isSelected = selectedSize === variant.size;
-                                    return (
-                                        <button
-                                            key={variant.size}
-                                            onClick={() => setSelectedSize(variant.size)}
-                                            disabled={!available}
-                                            aria-disabled={!available}
-                                            className={
-                                                !available
-                                                    ? styles.sizeSoldOut
-                                                    : isSelected
-                                                        ? styles.sizeActive
-                                                        : styles.sizeBtn
-                                            }
-                                        >
-                                            {variant.size}
-                                            {!available && <span className={styles.soldOutNote}>Sold out</span>}
-                                            {available && !isSelected && <span style={{ opacity: 0.3 }}>+</span>}
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                )}
+                    {isAccessory && (
+                        <div className={styles.accessoryDivider} />
+                    )}
 
-                {isAccessory && (
-                    <div className={styles.accessoryDivider} />
-                )}
+                    <button
+                        className={canAddToCart ? styles.addToCartBtn : styles.addToCartBtnDisabled}
+                        onClick={handleAddToCart}
+                        disabled={!canAddToCart}
+                    >
+                        {product.soldOut ? 'SOLD OUT' : canAddToCart ? 'ADD TO CART' : 'SELECT A SIZE'}
+                    </button>
+                </div>
 
-                <button
-                    className={canAddToCart ? styles.addToCartBtn : styles.addToCartBtnDisabled}
-                    onClick={handleAddToCart}
-                    disabled={!canAddToCart}
-                >
-                    {product.soldOut ? 'SOLD OUT' : canAddToCart ? 'ADD TO CART' : 'SELECT A SIZE'}
-                </button>
+                {reviews}
             </div>
 
             <SizeChart isOpen={isSizeChartOpen} onClose={() => setIsSizeChartOpen(false)} />

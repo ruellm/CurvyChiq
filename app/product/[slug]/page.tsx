@@ -17,18 +17,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <main className={styles.main}>
             <Header />
 
+            {/* Two grid children: .gallery and .detailsContainer. ProductClient renders both
+                so the interactive section sits inside .detailsContainer. */}
             <div className={styles.productLayout}>
-                <ProductClient product={product} />
-
-                <div className={styles.detailsContainer}>
-                    <div className={styles.productInfo}>
-                        <h1 className={styles.productName}>{product.name}</h1>
-                        <p className={styles.productPrice}>₱{product.price.toLocaleString()}</p>
-                        <p className={styles.productDescription}>{product.description}</p>
-                    </div>
-
-                    <ProductReviews product={product} />
-                </div>
+                <ProductClient
+                    product={product}
+                    info={
+                        <div className={styles.productInfo}>
+                            <h1 className={styles.productName}>{product.name}</h1>
+                            <p className={styles.productPrice}>₱{product.price.toLocaleString()}</p>
+                            <p className={styles.productDescription}>{product.description}</p>
+                        </div>
+                    }
+                    reviews={<ProductReviews product={product} />}
+                />
             </div>
         </main>
     );
