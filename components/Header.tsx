@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 import { useCart } from './CartContext';
@@ -28,25 +27,10 @@ const CartIcon = () => (
   </svg>
 );
 
+// Signed-in state returns in Phase 3 (task 3.1) from an httpOnly session cookie, not from
+// localStorage.
 export default function Header() {
   const { cartCount, setIsCartOpen } = useCart();
-  const [loggedInUser, setLoggedInUser] = useState<string | null>(null);
-
-  useEffect(() => {
-    const checkAuth = () => {
-      const user = localStorage.getItem('loggedInUser');
-      setLoggedInUser(user);
-    };
-
-    checkAuth();
-    window.addEventListener('authChange', checkAuth);
-    return () => window.removeEventListener('authChange', checkAuth);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem('loggedInUser');
-    setLoggedInUser(null);
-  };
 
   return (
     <>
@@ -70,21 +54,10 @@ export default function Header() {
             </ul>
           </nav>
           <div className={styles.actions}>
-            {loggedInUser ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                <Link href="/profile" className={styles.actionBtn} title="Profile" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <UserIcon />
-                  <span className={styles.userName}>{loggedInUser}</span>
-                </Link>
-                <span className={styles.separator}>|</span>
-                <button className={styles.actionBtn} onClick={handleLogout}>Log Out</button>
-              </div>
-            ) : (
-              <Link href="/login" className={styles.actionBtn} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                <UserIcon />
-                Log In
-              </Link>
-            )}
+            <Link href="/login" className={styles.actionBtn} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <UserIcon />
+              Log In
+            </Link>
             <button className={styles.actionBtn}>
               <SearchIcon />
             </button>

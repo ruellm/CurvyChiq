@@ -1,81 +1,27 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useCart } from '@/components/CartContext';
 import styles from './page.module.css';
 import Link from 'next/link';
-import { processOrder } from '@/app/actions';
 
-type Account = {
-    email: string;
-    password: string;
-    firstName: string;
-    lastName: string;
-    phone: string;
-    address: string;
-};
-
+// Placing an order is Phase 3: task 3.7 writes orders and order_items and decrements stock
+// in one transaction, 3.8 records the payment. Until then the form does not submit, because
+// a confirmation screen that saves nothing is worse than no button.
 export default function CheckoutPage() {
-    const { items, cartTotal, clearCart } = useCart();
+    const { items, cartTotal } = useCart();
     const [paymentMethod, setPaymentMethod] = useState('gcash');
-    const [orderPlaced, setOrderPlaced] = useState(false);
 
-    // Shipping fields — pre-filled from saved account
+    // Shipping fields. Pre-filling from the signed-in account is Phase 3 (task 3.6).
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
 
-    // Which fields the user has unlocked for editing
-    const [addressLocked, setAddressLocked] = useState(true);
-    const [phoneLocked, setPhoneLocked] = useState(true);
-
-    useEffect(() => {
-        const loggedInUser = localStorage.getItem('loggedInUser');
-        if (!loggedInUser) return;
-
-        const accounts: Account[] = JSON.parse(localStorage.getItem('curvychiq_accounts') || '[]');
-        const account = accounts.find(
-            (a) => a.firstName.toUpperCase() === loggedInUser
-        );
-        if (account) {
-            setFirstName(account.firstName);
-            setLastName(account.lastName);
-            setAddress(account.address);
-            setPhone(account.phone);
-            setEmail(account.email || '');
-        }
-    }, []);
-
-    const handlePlaceOrder = async (e: React.FormEvent) => {
-        e.preventDefault();
-        
-        try {
-            await processOrder(items, cartTotal, { email: email || 'No Email Provided' });
-        } catch (error) {
-            console.error(error);
-        }
-
-        setTimeout(() => {
-            setOrderPlaced(true);
-            clearCart();
-        }, 1500);
-    };
-
-    if (orderPlaced) {
-        return (
-            <main className={styles.main}>
-                <div className={styles.successContainer}>
-                    <h1>Thank you!</h1>
-                    <p>Your order has been successfully placed.</p>
-                    <p>Payment Method: {paymentMethod === 'cod' ? 'Cash on Delivery' : paymentMethod.toUpperCase()}</p>
-                    <Link href="/" className={styles.backLink}>Continue Shopping</Link>
-                </div>
-            </main>
-        );
-    }
+    // Nothing pre-fills these any more, so they start editable.
+    const [addressLocked, setAddressLocked] = useState(false);
+    const [phoneLocked, setPhoneLocked] = useState(false);
 
     if (items.length === 0) {
         return (
@@ -97,7 +43,7 @@ export default function CheckoutPage() {
                 <div className={styles.grid}>
                     {/* Left Column: Shipping & Payment */}
                     <div className={styles.column}>
-                        <form id="checkoutWrapper" onSubmit={handlePlaceOrder}>
+                        <form id="checkoutWrapper" onSubmit={(e) => e.preventDefault()}>
                             <section className={styles.section}>
                                 <h2>Shipping Details</h2>
                                 <div className={styles.formGrid}>
@@ -223,22 +169,14 @@ export default function CheckoutPage() {
                                             </span>
                                         </label>
 
+                                        {/* Demonstration mode. No card details are collected,
+                                            so there is nothing to store or leak. */}
                                         {paymentMethod === 'card' && (
                                             <div className={styles.cardDetails}>
-                                                <div className={styles.field}>
-                                                    <label>Card Number</label>
-                                                    <input type="text" placeholder="0000 0000 0000 0000" required pattern="\d{16}" maxLength={16} />
-                                                </div>
-                                                <div className={styles.formGrid}>
-                                                    <div className={styles.field}>
-                                                        <label>Expiry Date</label>
-                                                        <input type="text" placeholder="MM/YY" required pattern="\d{2}/\d{2}" maxLength={5} />
-                                                    </div>
-                                                    <div className={styles.field}>
-                                                        <label>CVC</label>
-                                                        <input type="text" placeholder="123" required pattern="\d{3,4}" maxLength={4} />
-                                                    </div>
-                                                </div>
+                                                <span className={styles.smallText}>
+                                                    Demonstration mode. No card details are collected
+                                                    and no payment is taken.
+                                                </span>
                                             </div>
                                         )}
                                     </div>
@@ -286,8 +224,17 @@ export default function CheckoutPage() {
                                     <span>Total</span>
                                     <span>₱{cartTotal.toLocaleString()}</span>
                                 </div>
-                                <button type="submit" form="checkoutWrapper" className={styles.placeOrderBtn}>
-                                    Place Order
+                                <p className={styles.smallText} style={{ marginTop: '1rem' }}>
+                                    Checkout is coming soon. Orders cannot be placed yet, so
+                                    nothing you enter here is submitted or stored.
+                                </p>
+                                <button
+                                    type="submit"
+                                    form="checkoutWrapper"
+                                    className={styles.placeOrderBtn}
+                                    disabled
+                                >
+                                    Place Order &mdash; Coming Soon
                                 </button>
                             </div>
                         </div>

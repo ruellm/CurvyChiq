@@ -1,7 +1,5 @@
 'use server';
 
-import nodemailer from 'nodemailer';
-
 // Reads live in db/queries.ts. This file holds server actions only.
 // Re-exported so existing imports of the Product type keep working.
 export type { Product, Review, Variant } from '@/db/queries';
@@ -21,33 +19,17 @@ export async function deleteProduct(_id: string): Promise<never> {
     throw new Error(PHASE_2);
 }
 
-export async function processOrder(cart: any[], total: number, customerDetails: any) {
-    // Generate a tracking number
-    const trackingNumber = 'TRK-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-
-    // We send an email to chiquiglee@gmail.com
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'chiquiglee@gmail.com',
-            pass: 'YOUR_APP_PASSWORD_HERE'
-        }
-    });
-
-    let mailOptions = {
-        from: '"CurvyChiq Orders" <no-reply@curvychiq.test>',
-        to: 'chiquiglee@gmail.com',
-        subject: `New Order Received! Tracking: ${trackingNumber}`,
-        text: `You have received a new order.\n\nTracking Number: ${trackingNumber}\nTotal: ₱${total.toLocaleString()}\nItems: ${cart.map(i => i.name).join(', ')}\nCustomer Email: ${customerDetails.email}`,
+// Phase 3 replaces this entirely: task 3.7 writes orders and order_items and decrements stock
+// in one transaction, 3.8 records the payment, 3.10 sends the confirmation email through a
+// real sending account. The previous version hardcoded a Gmail address and an app-password
+// placeholder in source, generated a tracking number and saved nothing.
+export async function processOrder(
+    _cart: unknown[],
+    _total: number,
+    _customerDetails: unknown,
+): Promise<{ success: false; reason: string }> {
+    return {
+        success: false,
+        reason: 'Orders are not implemented yet. Nothing was saved and no email was sent.',
     };
-
-    try {
-        if ((transporter.options as any).auth?.pass !== 'YOUR_APP_PASSWORD_HERE') {
-            await transporter.sendMail(mailOptions);
-        }
-    } catch(err) {
-        console.error("Failed to send email", err);
-    }
-
-    return { success: true, trackingNumber };
 }
