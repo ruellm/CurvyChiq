@@ -1,0 +1,35 @@
+/* Tailwind for /admin only.
+   Preflight is deliberately NOT imported. It resets every element globally, and the
+   customer site is CSS Modules whose look is contractually fixed. app/globals.css already
+   supplies the box-sizing and margin reset the admin pages need. */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+/* Only scan the admin tree, so no customer-facing class name can pull in a utility. */
+@source './**/*.tsx';
+
+/* The handful of preflight rules the admin markup actually relies on, scoped under
+   .admin-root so they can never reach a customer page. Borders already work without
+   preflight because Tailwind emits @property --tw-border-style with initial-value solid,
+   and app/globals.css already supplies box-sizing, margin and padding. */
+@layer base {
+  .admin-root :is(ul, ol) {
+    list-style: none;
+  }
+
+  .admin-root table {
+    border-collapse: collapse;
+  }
+
+  .admin-root :is(button, input, select, textarea) {
+    font: inherit;
+    color: inherit;
+  }
+
+  .admin-root button {
+    background: transparent;
+    cursor: pointer;
+  }
+}

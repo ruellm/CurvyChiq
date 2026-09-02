@@ -135,3 +135,10 @@
   border-color: var(--color-gray-200);
   cursor: not-allowed;
 }
+/* The card action is a link now, so it needs the block layout a button had by default. */
+.actionLink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}

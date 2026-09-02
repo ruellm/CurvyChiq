@@ -33,6 +33,11 @@ export interface Product {
   rating?: string
   reviewCount?: number
   reviews?: Review[]
+  // True when no variant is both active and in stock. Aggregated in SQL so a card never has
+  // to load the variant rows.
+  soldOut: boolean
+  // Populated by getProductBySlug and getProductById only. List queries leave it empty and
+  // use soldOut instead.
   variants: Variant[]
 }
 
@@ -47,6 +52,8 @@ type ProductRow = {
   image: string | null
   images: { colour: string; url: string }[]
   variants: Variant[]
+  colours: string[]
+  sold_out: boolean
   review_count: number
   rating: string | null
   reviews: {
@@ -59,16 +66,26 @@ type ProductRow = {
   }[]
 }
 
-// Reviews are only worth fetching on a product page. List pages still get the count and the
-// average, which is all a card ever renders.
-function selectProduct(withReviews: boolean): SQL {
-  const reviews = withReviews
+// Reviews and the full variant list are only worth fetching on a product page. A card needs
+// neither: it renders the review count, the colours and one sold-out flag, all aggregated in
+// this same statement so listing pages stay at one query.
+function selectProduct(detail: boolean): SQL {
+  const reviews = detail
     ? sql`coalesce((
         select json_agg(json_build_object(
           'id', r.id, 'reviewer', r.reviewer_name, 'rating', r.rating,
           'comment', r.comment, 'sizePurchased', r.size_purchased, 'createdAt', r.created_at
         ) order by r.created_at desc)
         from reviews r where r.product_id = p.id and r.is_approved
+      ), '[]'::json)`
+    : sql`'[]'::json`
+
+  const variants = detail
+    ? sql`coalesce((
+        select json_agg(json_build_object(
+          'size', v.size, 'colour', v.colour, 'stockQty', v.stock_qty, 'isActive', v.is_active
+        ) order by v.id)
+        from product_variants v where v.product_id = p.id
       ), '[]'::json)`
     : sql`'[]'::json`
 
@@ -89,12 +106,19 @@ function selectProduct(withReviews: boolean): SQL {
         from product_images i
         where i.product_id = p.id and i.colour is not null
       ), '[]'::json) as images,
-      coalesce((
-        select json_agg(json_build_object(
-          'size', v.size, 'colour', v.colour, 'stockQty', v.stock_qty, 'isActive', v.is_active
-        ) order by v.id)
-        from product_variants v where v.product_id = p.id
-      ), '[]'::json) as variants,
+      ${variants} as variants,
+      -- Colours in the order they were first seeded, from the variants rather than the images.
+      (select coalesce(json_agg(g.colour order by g.first_id), '[]'::json)
+        from (
+          select v.colour, min(v.id) as first_id
+          from product_variants v where v.product_id = p.id
+          group by v.colour
+        ) g) as colours,
+      -- Sold out when nothing sellable is left anywhere on the product.
+      not exists (
+        select 1 from product_variants v
+        where v.product_id = p.id and v.is_active and v.stock_qty > 0
+      ) as sold_out,
       (select count(*)::int from reviews r
         where r.product_id = p.id and r.is_approved) as review_count,
       (select round(avg(r.rating), 1) from reviews r
@@ -117,9 +141,6 @@ function toProduct(row: ProductRow): Product {
     ;(colorImages[img.colour] ??= []).push(img.url)
   }
 
-  // Colours come from the variants, which are the sellable truth, not from the image rows.
-  const colors = [...new Set(row.variants.map((v) => v.colour))]
-
   return {
     id: String(row.id),
     slug: row.slug,
@@ -128,9 +149,10 @@ function toProduct(row: ProductRow): Product {
     category: row.category,
     image: row.image,
     description: row.description ?? undefined,
-    colors,
+    colors: row.colours,
     colorImages,
     isNewArrival: row.is_new_arrival,
+    soldOut: row.sold_out,
     rating: row.rating ?? undefined,
     reviewCount: row.review_count,
     reviews: row.reviews.map((r) => ({

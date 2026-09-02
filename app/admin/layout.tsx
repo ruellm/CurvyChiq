@@ -1,5 +1,7 @@
 import Link from "next/link";
 import "../globals.css";
+// Admin-only Tailwind. Imported here and nowhere else.
+import "./admin.css";
 
 export default function AdminLayout({
     children,
@@ -7,7 +9,7 @@ export default function AdminLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex min-h-screen bg-gray-100 font-sans">
+        <div className="admin-root flex min-h-screen bg-gray-100 font-sans">
             {/* Sidebar */}
             <aside className="w-64 bg-white shadow-md">
                 <div className="p-6 border-b">
