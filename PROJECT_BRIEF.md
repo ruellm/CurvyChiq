@@ -76,103 +76,124 @@ agreed in writing before any work starts. This is the main scope-creep risk.
 
 ## 4. Current codebase state
 
-### Stack (already correct — no migration needed)
+> Rewritten at the end of Phase 1. Everything below describes the repo as it actually is.
+> See `PHASE_1_SUMMARY.md` for what changed and why.
+
+### Stack
 
 - **Next.js 16.1.4**, App Router, Server Components + Server Actions
-- **React 19.2.3**, TypeScript
-- **CSS Modules** (12 files, ~1,850 lines) — *no Tailwind installed*
-- `mysql2` ^3.20.0, `nodemailer` ^8.0.2
-- ~2,360 lines of TSX across `app/` and `components/`
-- 29 products in `data/inventory.json`; 50 images in `public/generated/`
-- Categories in the data: Tops (6), Bottoms (7), Dresses (6), Accessories (5), New Arrival (5)
+- **React 19.2.3**, TypeScript, `strict` on
+- **CSS Modules** for the customer-facing site — the look is contractually preserved
+- **Tailwind v4** for `/admin` **only**, scoped so it cannot touch customer pages
+- **PostgreSQL on Neon** via `drizzle-orm` and the `@neondatabase/serverless` HTTP driver
+- **Cloudinary** for product images
+- `nodemailer` is still installed but **unused** — nothing imports it
 
-### What genuinely works and is being KEPT
+### Where things live
 
-Homepage, category pages, product detail (colour swatches + photo gallery), cart drawer,
-size chart, checkout **form**, login/register **pages**, About and Privacy pages. All the
-CSS Modules. This is real, finished work and the proposal contractually promises the look is kept.
+```
+app/            routes. actions.ts holds server actions only, no reads
+db/schema.ts    14 tables, the single source of schema truth
+db/queries.ts   the only module that talks to the database
+db/seed.ts      seeds the catalogue from data/inventory.json
+drizzle/        generated migration SQL, checked in
+lib/db.ts       drizzle + Neon HTTP client, throws if DATABASE_URL is missing
+middleware.ts   blocks /admin with a 404 unless ADMIN_ENABLED=true
+scripts/        migrate-images.ts (Cloudinary), generate_doc.js, migrate.mjs (legacy)
+data/           inventory.json — SEED INPUT ONLY, never read at runtime
+```
 
-### What is fake, broken or missing
+### What works, from the database
 
-| Area | Reality |
+| Area | State |
 |---|---|
-| **Orders** | `processOrder()` in `app/actions.ts` generates a random tracking number, tries to email, and **saves nothing**. There is no orders table. |
-| **Stock** | Does not exist. Sizes are hardcoded `['S','M','L','XL','XXL']` in `ProductClient.tsx` for every product. |
-| **Auth** | Accounts stored in browser **localStorage as plain text, including passwords**. Login compares strings client-side. |
-| **Google SSO** | Entirely fake — writes a hardcoded `googleuser@gmail.com` to localStorage. |
-| **Payment** | Collects card number / expiry / CVC and discards them. No gateway. |
-| **Tracking** | Number generated then thrown away. No shipment record, no lookup page. |
-| **Order history** | Profile "Purchases" tab hardcoded to "You haven't made any purchases yet." |
-| **Admin** | Exists at `/admin` and works — with **zero access control**. Anyone can delete the catalogue. |
-| **Admin styling** | Written in Tailwind classes, but **Tailwind is not installed**. Renders unstyled. |
-| **Database** | Only 2 tables (`products`, `reviews`) via `scripts/migrate.mjs`. ~13 more needed. |
-| **Data source** | `getProducts()` silently falls back to `data/inventory.json` when MySQL is unreachable — two sources of truth, admin edits can vanish with no warning. |
-| **Reviews** | All 29 products' reviews are generated fake data (see `add_reviews.js`). |
-| **Product URLs** | Slug derived from product name, so renaming breaks links and duplicate names collide. |
-| **Version control** | **No git repository at all.** |
-| **Secrets** | `.env` committed with `root` / empty password. |
+| **Catalogue** | 29 products, 4 categories, served entirely from Postgres. No JSON fallback. |
+| **Stock** | Real. 435 variants, one per size × colour, `UNIQUE (product_id, size, colour)`. |
+| **Product page** | Real sizes per colour, sold-out sizes struck through and unselectable, sold-out colours dimmed, CTA disabled until an in-stock size is chosen. |
+| **Listing pages** | Sold-out badge from a SQL aggregate. Cards link to the stored slug and no longer sell. |
+| **Images** | 45 rows, all on Cloudinary. Local files kept in `public/generated/` as the only backup. |
+| **Reviews** | 108 seeded rows displayed on product pages. Rating and count derived, not stored. |
+| **Queries** | A product page issues **1** query; homepage 1; category pages 2. |
+| **Size guide** | Reachable from the product page size selector. |
+
+### What is deliberately switched off
+
+These are not broken. They were removed because they were unsafe, and the page now says so.
+
+| Area | State | Restored by |
+|---|---|---|
+| **Login / register** | Forms render, disabled, "coming soon" | Phase 3, tasks 3.1–3.2 |
+| **Profile** | Signed-out notice | Phase 3 / Phase 4 (4.4) |
+| **Checkout** | Renders, Place Order disabled | Phase 3, tasks 3.6–3.9 |
+| **Orders** | `processOrder()` is a stub that saves nothing and admits it | Phase 3, task 3.7 |
+| **Admin** | Returns **404** unless `ADMIN_ENABLED=true` | Phase 2, task 2.1 |
+| **Admin writes** | `addProduct`/`updateProduct`/`deleteProduct` throw | Phase 2, tasks 2.3–2.7 |
+
+### What is still missing
+
+- No authentication of any kind. No `users` rows.
+- No orders, payments or shipments. Those tables exist and are empty.
+- Stock is a uniform placeholder of **10** on all 435 variants.
+- Photography is thin: 23 of 29 products have any image, and only 2 have a full colour gallery.
 
 ---
 
-## 5. Decisions already made
+## 5. Decisions made — now facts
 
-1. **Continue from the existing source, do not rebuild.** Keep the presentation layer, replace
-   everything underneath. Rebuilding ~1,850 lines of CSS would burn the budget for zero
-   client-visible gain, and the proposal promises the look is kept.
-2. **Hosting: Vercel free tier.** Best Next.js support by a wide margin (built by the Next team).
-   *Caveat:* the Hobby plan is licensed for non-commercial use — accurate for a capstone, but if
-   she trades for real it means Vercel Pro (~$20/mo) or a move to Netlify.
-3. **Cloudflare Pages was ruled out.** It runs the Workers runtime, not Node.js, which is hostile
-   to `mysql2` (raw TCP) and `nodemailer`. Netlify is the fallback if Vercel is ever a problem.
-4. **Deploy in week 1, not week 5.** Get a staging URL up as soon as the database connects.
-   Phase 4's go-live then just points the domain at something already proven.
-5. **Payment and tracking stay simulated**, as agreed with the client.
-6. **Security is folded into feature work**, not a separate line item. It still gets built —
-   the site holds customer accounts and stays public for a year.
-
-## 6. Open decisions — RESOLVE BEFORE PHASE 1
-
-### A. MySQL or PostgreSQL? ← the big one
-
-Switching costs almost nothing *right now* (only `lib/db.ts`, ~6 queries in `app/actions.ts`,
-and `scripts/migrate.mjs`) and the schema is being rewritten from scratch anyway. That cost
-climbs every week.
-
-- **Preferred: PostgreSQL on Neon.** Free tier, scales to zero but **auto-wakes**, and its
-  HTTP serverless driver completely removes the connection-pool problem (below). First-class
-  Vercel integration.
-- **If MySQL is mandated: TiDB Cloud Serverless.** MySQL-compatible so `mysql2` works unchanged,
-  ~5GB free, no hard pause.
-- **Avoid Supabase free tier** — it *pauses* a project after ~1 week of inactivity and needs a
-  manual restore. For a site that sits idle between demos, that is the exact failure mode where
-  the professor opens the URL and it is down.
-- PlanetScale and Railway no longer have free tiers.
-
-**Blocking question for the client:** does her programme require MySQL/XAMPP? Some capstone
-programmes specify it. Ask before deciding.
-
-### B. Raw SQL or a query builder?
-
-~15 tables are being designed. **Drizzle** pairs well with Neon, gives typed queries, and stays
-close enough to SQL that she can explain it to a panel — which matters more here than usual.
-Prisma is the alternative. Decide alongside A.
+1. **Continued from the existing source.** The presentation layer was kept, everything under it
+   replaced. The ~1,850 lines of CSS Modules survive untouched.
+2. **PostgreSQL on Neon.** Provisioned, migrated, seeded.
+3. **Drizzle ORM** with the `@neondatabase/serverless` HTTP driver.
+4. **Cloudinary** holds the product images; 45 assets under `curvychiq/products`.
+5. **Vercel** for hosting. *Caveat unchanged:* the Hobby plan is non-commercial, which is
+   accurate for a capstone but means Pro (~$20/mo) or Netlify if she ever trades for real.
+6. **Cloudflare Pages ruled out** — Workers runtime, hostile to Node libraries.
+7. **Payment and tracking stay simulated**, as agreed with the client.
+8. **Security is folded into feature work.** The Phase 1 deletion checklist is complete.
 
 ---
 
-## 7. Known technical constraints from serverless hosting
+## 6. Open decisions — RESOLVED
 
-These are imposed by Vercel's model, not preferences:
+### A. MySQL or PostgreSQL? → **PostgreSQL on Neon**
 
-1. **No SSH, no persistent filesystem.** Deployment is git-push-triggered. Migrations run from
-   the developer's machine against the remote database.
-2. **`data/inventory.json` fallback must be removed.** `app/actions.ts:12` reads it at runtime.
-   Bundled files are readable but never writable.
-3. **Connection pooling breaks.** `lib/db.ts` sets `connectionLimit: 10`; every warm serverless
-   instance opens its own pool, so ten instances means 100 connections and a free-tier database
-   refuses them. Needs an HTTP driver (Neon) or a much lower limit plus a pooler.
-4. **Photo uploads must go to object storage** (Cloudinary), not the server disk. This is forced,
-   not optional.
-5. **`scripts/migrate.mjs` hardcodes `localhost` / `root` / empty password** — must read env vars.
+Neon's free tier scales to zero but **auto-wakes**, so the site is never down when the
+professor opens it. Its HTTP driver removes the serverless connection-pool problem entirely.
+Postgres also *enforces* `CHECK` constraints, which MySQL silently ignored before 8.0.16 — that
+matters because `CHECK (stock_qty >= 0)` is the backstop for the concurrency case in task 3.7.
+
+### B. Raw SQL or a query builder? → **Drizzle**
+
+Typed queries, and close enough to SQL that she can explain any of it to the panel. The schema
+lives in TypeScript at `db/schema.ts` and `drizzle-kit generate` emits the migration SQL, which
+is checked in and reviewable.
+
+### C. Identity keys, not UUIDs
+
+`GENERATED ALWAYS AS IDENTITY` integers. She has to defend the schema to a panel, and
+"the database assigns it, and the application cannot overwrite it" is a sentence she can say.
+
+---
+
+## 7. Serverless constraints — how each is handled
+
+| Constraint | Resolution |
+|---|---|
+| No SSH, no persistent filesystem | Migrations and seeds run from the developer's machine against the remote database. Deployment is git-push. |
+| `data/inventory.json` read at runtime | **Removed.** `lib/db.ts` throws if `DATABASE_URL` is absent rather than serving stale JSON. |
+| Connection pooling breaks | **Gone.** The Neon HTTP driver holds no connections. `mysql2` and its `connectionLimit: 10` pool are uninstalled. |
+| Photo uploads need object storage | **Cloudinary.** All 45 images migrated; `next.config.ts` allows `res.cloudinary.com`. |
+| `scripts/migrate.mjs` hardcoded localhost/root | Superseded by `drizzle-kit`. The file is still present pending a decision to delete it. |
+
+### One constraint discovered during Phase 1
+
+**The Neon HTTP driver has no interactive transactions.** `db.transaction()` throws. This is the
+single most important thing to know before task 3.7. Two consequences:
+
+- Stock deduction must be a **conditional UPDATE** — `... SET stock_qty = stock_qty - $1
+  WHERE id = $2 AND stock_qty >= $1` — and check the affected row count, rather than
+  read-then-write.
+- Multi-table writes use `db.batch([...])`, which Neon executes as one server-side transaction.
 
 ---
 
@@ -225,6 +246,7 @@ In the repo (`d:\dump\curvychiq\orig`):
 
 | File | What it is | Audience |
 |---|---|---|
+| `PHASE_1_SUMMARY.md` | What Phase 1 shipped, deleted and switched off — **read first** | Internal |
 | `PROJECT_BRIEF.md` | This document | Internal |
 | `PROJECT_PLAN.md` | Phase-by-phase execution plan | Internal |
 | `CLAUDE.md` | Repo context, auto-loaded by Claude Code | Internal |
@@ -236,3 +258,41 @@ In `d:\dump\curvychiq\Docs to send`:
 |---|---|---|
 | `CurvyChiQ_Proposal_v1.0.xlsx` | The approved client proposal — **the scope boundary** | **Client-facing** |
 | `CurvyChiQ_VibeCoded_Time_and_Price.xlsx` | AI-assisted estimate + pricing strategy | **INTERNAL ONLY — must never be sent.** Contains effective hourly rates, margin analysis and negotiation notes. It is currently sitting in a folder called "Docs to send" — move it out. |
+
+---
+
+## 12. Waiting on the client — blocks Phase 2 sign-off
+
+These three are not code problems. Nothing downstream can be finished without them, and all
+three are visible in the demo.
+
+### 12.1 Real stock numbers
+
+Every one of the 435 variants is seeded at **10**. The Phase 1 demo line — "set a size to zero
+and watch it grey out" — works, but the numbers are fiction. Needed: stock per size and colour,
+per product. Until then no low-stock warning (task 2.7) means anything.
+
+### 12.2 Product photography
+
+The image data she supplied is mostly missing from disk. Current state:
+
+| | |
+|---|---|
+| Products with a full colour gallery | **2** (Cropped Cardigan, Asymmetric Hem Skirt) |
+| Products with a single image | **21** |
+| Products with **no** image at all | **6** — all dresses |
+
+The six with none are Linen Blend Dress, Floral Maxi Dress, Ribbed Midi Knit Dress, Satin Wrap
+Dress, Halter Neck Mini Dress, Long Sleeve Shift Dress. The Dresses category page is visibly
+sparse. The pages do not break — a product with no photo renders a neutral placeholder cell —
+but this is the most obvious weakness on the live site. Needed: photos per product, ideally per
+colour. Upload lands in task 2.5.
+
+### 12.3 The size chart contradicts the catalogue
+
+`components/SizeChart.tsx` documents **XL, 2XL, 3XL, 4XL, 5XL** with bust/waist/hip
+measurements. The catalogue sells **S, M, L, XL, XXL**. Only "XL" appears in both, and it may
+not mean the same body in each. This is a content decision, not a bug: either the chart is
+rewritten to the sizes actually sold, or the sizes sold are renamed to the chart's scale — which
+would mean re-seeding all 435 variants and their SKUs. Cheaper to decide now than after orders
+exist.
